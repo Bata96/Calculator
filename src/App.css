@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(6, 102, 109);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  html body {
+    height: 100vh;
+  }
+
+.sadrzaj {
+  height: 500px;
+  width: 350px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(5, 1fr);
+  position: relative;
+  gap: 2px;
+  border: 6px solid white;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.jedan {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
   color: white;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.jedan:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#display {
+  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  color: white;
+  position: relative;
+}
+
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(167, 3, 3);
+}
+
+#equals {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  background-color: rgb(5, 5, 156);
+}
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.operacija {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(73, 97, 73);
+}
+
+.operacija:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.final {
+  color: yellow;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.minus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(73, 97, 73);
+}
+
+.minus:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
